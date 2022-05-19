@@ -1,4 +1,4 @@
-const { createUserAccount } = require('../services/user/createuser');
+const { createUserAccount } = require('../services/db/user/createuser');
 
 const createUser = params => {
   return new Promise((resolve, reject) => {

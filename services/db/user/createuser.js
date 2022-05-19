@@ -1,5 +1,5 @@
-const User = require('../../models/user');
-const UserSettings = require('../../models/usersettings');
+const User = require('../../../models/user');
+const UserSettings = require('../../../models/usersettings');
 const mongoose = require('mongoose');
 
 const createUserAccount = params => {
