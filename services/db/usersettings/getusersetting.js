@@ -1,4 +1,4 @@
-const UserSettings = require('../../../models/usersettings');
+const UserSettings = require('../../../models/schema/usersettings');
 
 const getUserSetting = id => {
   return new Promise((resolve, reject) => {

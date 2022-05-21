@@ -3,6 +3,12 @@ const router = express.Router();
 const User = require('../../controllers/users');
 const UserSettings = require('../../controllers/usersettings');
 
+router.get('/', (req, res) => {
+  User.allUsers()
+    .then(users => res.status(200).send(users))
+    .catch(err => res.status(400).send(err));
+});
+
 router.post('/', (req, res) => {
   User.createUser(req.body)
     .then(user => res.status(200).send(user))
