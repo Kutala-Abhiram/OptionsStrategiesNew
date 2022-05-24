@@ -9,10 +9,7 @@ const lotSize = {
 };
 
 const strategyTypes = {
-  1 : 'SHORTSTRANGLE',
-  2 : 'EXPIRYDAYNEUTRAL',
-  3 : 'SHORTSTRADDLE-LOWCAPITAL',
-  5 : 'SHORTSTRADDLE-NEW'
+  1 : '920shortstraddle'
 };
 
 module.exports = {

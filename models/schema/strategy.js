@@ -46,6 +46,11 @@ const strategySchema = new mongoose.Schema({
     required: true,
     default: true
   },
+  interval: {
+    type: Number,
+    required: true,
+    default: 1
+  },
   userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User', 
