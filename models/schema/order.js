@@ -11,6 +11,10 @@ const orderSchema = new mongoose.Schema({
     ref: 'User',
     required: true
   },
+  quantity: {
+    type: Number,
+    required: true
+  },
   symbol: {
     type: String,
     required: true
@@ -27,3 +31,5 @@ const orderSchema = new mongoose.Schema({
     type: Number
   }
 });
+
+module.exports = mongoose.model('Order', orderSchema);

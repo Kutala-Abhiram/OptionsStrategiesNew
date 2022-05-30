@@ -12,8 +12,14 @@ const strategyTypes = {
   1 : '920shortstraddle'
 };
 
+const strikeDiff = {
+  'NIFTY' : 50,
+  'BANKNIFTY' : 100
+}
+
 module.exports = {
   underlyingSecurities,
   strategyTypes,
-  lotSize
+  lotSize,
+  strikeDiff
 }
