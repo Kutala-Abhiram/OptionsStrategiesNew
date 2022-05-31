@@ -51,6 +51,21 @@ const strategySchema = new mongoose.Schema({
     required: true,
     default: 1
   },
+  stopLoss: {
+    type: JSON,
+    required: true,
+    default: {}
+  },
+  stopLossPercentage: {
+    type: Number,
+    required: true,
+    default: 20
+  },
+  target: {
+    type: Number,
+    required: true,
+    default: 50
+  },
   userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User', 
