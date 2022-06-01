@@ -10,8 +10,7 @@ router.post('/', (req, res) => {
 
 router.get('/:id/execute', (req, res) => {
   Strategy.executeStrategy(req)
-    .then(strategy => res.status(200).send(strategy))
-    .catch(err => res.status(400).send(err));
+  res.status(200).send({ message: 'Strategy executed' });
 });
 
 module.exports = router;

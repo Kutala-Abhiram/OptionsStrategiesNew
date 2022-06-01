@@ -3,16 +3,14 @@ const { StrategyFactory } = require('./StrategyFactory');
 
 const executeStrategy = (strategyId) => {
   return new Promise((resolve, reject) => {
-    Strategy.findById(strategyId, (err, strategy) => {
-      if(err) {
-        return reject(err);
-      }
-      if(!strategy) {
-        return reject(new Error('Strategy not found'));
-      }
-      processStrategy(strategy);
-      resolve(strategy);
-    });
+    Strategy.findById(strategyId)
+      .then(strategy => {
+        if(!strategy) {
+          return reject('Strategy not found');
+        }
+        processStrategy(strategy);
+        resolve(strategy);
+      });
   });
 }
 
